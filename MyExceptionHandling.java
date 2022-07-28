@@ -1,3 +1,4 @@
+import eh.exceptions.FileSizeException;
 import eh.exceptions.IsInternetConnectedException;
 
 public class MyExceptionHandling {
@@ -5,14 +6,7 @@ public class MyExceptionHandling {
 		Repo mr = new Repo();
 		try {
 			mr.turnOnInternet();
-			mr.makeRepo();
-//			int min = 10;
-//			int max = 15;
-//			for(int i = 1; i <= 100; i++) {
-//				//Math.round(Math.random() * min)  // this always lies in 0 to min
-//				System.out.println(Math.round(Math.random() * (max - min)) + min);
-//			}
-			
+			mr.makeRepo();		
 		} catch(IsInternetConnectedException ex) {
 			System.out.println(ex.getMessage());
 		}	
@@ -22,6 +16,7 @@ public class MyExceptionHandling {
 
 class Repo{
 	boolean internet;
+	int fileSize;
 	void turnOnInternet() {
 		if(internet != true) {
 			internet = true;
@@ -33,6 +28,21 @@ class Repo{
 			IsInternetConnectedException net = new IsInternetConnectedException("Error: Internet not found");
 			throw net;
 		}
+		try {
+			checkFileSize();
+		} catch (FileSizeException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		System.out.println("Repository succesfully created...");
+	}
+	
+	void checkFileSize() throws FileSizeException{
+		fileSize = (int)Math.round(Math.random() * (5000));
+		if(fileSize > 2000) {
+			FileSizeException fs = new FileSizeException("Error: File Size too large to upload");
+			throw  fs;
+		}
+		System.out.println("File Uploaded Succesfully");
 	}
 }
