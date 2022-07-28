@@ -37,3 +37,21 @@ class NetflixAccount implements Serializable{
 				+ "]";
 	}
 }
+
+class GithubAccount implements Serializable{
+	private String email;
+	private String accountHolderName;
+	private transient String password;
+	public GithubAccount(String email, String accountHolderName, String password) {
+		super();
+		this.email = email;
+		this.accountHolderName = accountHolderName;
+		this.password = password;
+	}
+	
+	@Override
+	public String toString() {
+		return "NetflixAccount [email=" + email + ", accountHolderName=" + accountHolderName + ", password=" + password
+				+ "]";
+	}
+}
