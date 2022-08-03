@@ -26,7 +26,7 @@ public class ModifyTest {
 			
 			
 			Scanner scan1 = new Scanner(System.in);
-			System.out.println("Enter employee number : ");
+			System.out.println("Enter student roll number : ");
 			int rollno = scan1.nextInt();
 			
 			Statement st = conn.createStatement();
@@ -35,11 +35,11 @@ public class ModifyTest {
 			if(rs.next()) {
 			
 				Scanner scan2 = new Scanner(System.in);
-				System.out.println("Enter employee name   : ");
+				System.out.println("Enter Student name   : ");
 				String sname = scan2.next();
 				
 				Scanner scan3 = new Scanner(System.in);
-				System.out.println("Enter employee salary : ");
+				System.out.println("Enter Student date of birth : ");
 				String sbirthdate = scan3.next();
 				Date dob = Date.valueOf(sbirthdate);
 				

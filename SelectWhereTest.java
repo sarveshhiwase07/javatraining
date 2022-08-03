@@ -18,6 +18,8 @@ public class SelectWhereTest {
 			
 			ResultSet rs = statement.executeQuery("SELECT * FROM STUDENT WHERE ROLLNO=" + rollNo);
 			if(rs.next()) {
+				System.out.println("+-------------------------------------------------------------------------+");
+				System.out.println("Rollno StudentName  BirthDate   physics chemistry  maths  total  grade" );
 				int rollno = rs.getInt(1);
 				String studentName = rs.getString(2);
 				String birthDate = rs.getString(3);
@@ -26,11 +28,11 @@ public class SelectWhereTest {
 				int maths = rs.getInt(6);
 				int total = rs.getInt(7);
 				String grade = rs.getString(8);
-				System.out.println(rollno + " " + studentName + " "+  birthDate + " " + physics + " " + chemistry + " " + maths + " " + total + " " + grade );
+				System.out.println(rollno + "        " + studentName + "       "+  birthDate + "   " + physics + "       " + chemistry + "       " + maths + "       " + total + "    " + grade );
 				rs.close();
 				statement.close();
 				conn.close();
-				
+				System.out.println("+-------------------------------------------------------------------------+");
 			} else {
 				throw new StudentNotFoundException("Student not found with rollno " + rollNo);
 			}

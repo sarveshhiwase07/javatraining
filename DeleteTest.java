@@ -25,7 +25,7 @@ public class DeleteTest {
 			
 			
 			Scanner scan1 = new Scanner(System.in);
-			System.out.println("Enter roll number : ");
+			System.out.println("Enter student roll number : ");
 			int roll = scan1.nextInt();
 			
 			Statement st = conn.createStatement();
