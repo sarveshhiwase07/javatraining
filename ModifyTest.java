@@ -1,4 +1,5 @@
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -40,10 +41,11 @@ public class ModifyTest {
 				Scanner scan3 = new Scanner(System.in);
 				System.out.println("Enter employee salary : ");
 				String sbirthdate = scan3.next();
+				Date dob = Date.valueOf(sbirthdate);
 				
 				pst.setInt(3, rollno);//fill up the question mark with its value
 				pst.setString(1, sname);
-				pst.setString(2, sbirthdate);
+				pst.setDate(2, dob);
 
 				System.out.println("Trying to execute the prepared statement....");
 				int rows = pst.executeUpdate();

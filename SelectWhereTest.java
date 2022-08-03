@@ -41,14 +41,3 @@ public class SelectWhereTest {
 
 }
 
-
-
-
-/*
- * 
- * 
- * 
- * 
- * 
- * 
- * */

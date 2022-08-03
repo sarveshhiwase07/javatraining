@@ -1,4 +1,5 @@
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -46,6 +47,7 @@ public class InsertTest {
 			Scanner sc3 = new Scanner(System.in);
 			System.out.println("Enter student birthdate to add");
 			String studentBirthdate = sc3.next();
+			Date dob = Date.valueOf(studentBirthdate);
 			Scanner sc4 = new Scanner(System.in);
 			System.out.println("Enter student physics marks to add");
 			int physics = sc4.nextInt();
@@ -59,7 +61,7 @@ public class InsertTest {
 			
 			pst.setInt(1, rollno);
 			pst.setString(2, studentName);
-			pst.setString(3, studentBirthdate);
+			pst.setDate(3, dob);
 			pst.setInt(4, physics);
 			pst.setInt(5, chemistry);
 			pst.setInt(6, maths);
