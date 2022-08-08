@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Login Page</title>
+</head>
+<body>
+<form action="UserDashBoard.html">
+	<table>
+		<tr>
+			<td>Enter Username</td>
+			<td>
+				<input type=text id="username" onkeyup="clearUserMsg()" name=username />
+			</td>
+		</tr>
+		<tr>
+			<td>Enter Password</td>
+			<td>
+				<input type=password id="password" onkeyup="clearPassMsg()" name=password />
+			</td>
+		</tr>
+		<tr>
+			<td colspan=2>
+				<input type=submit name="submit" onclick="return validate()" />
+			</td>
+		</tr>
+		<tr>
+			<td colspan=2>
+				Not a member yet?
+				<a href="Register.html"> Register </a>
+			</td>
+		</tr>
+		<tr>
+			<td colspan=2>
+				Forgot Password?
+				<a href="ForgotPassword.html"> Forgot Password </a>
+			</td>
+		</tr>
+		<tr>
+			<td colspan=2>
+				Reset Password?
+				<a href="ResetPassword.html"> Reset Password </a>
+			</td>
+		</tr>
+	</table>
+</form>
+<div style="text-align: center">
+		<a href="SearchFlights.html">Back to home</a>
+	</div>
+</body>
+</html>
