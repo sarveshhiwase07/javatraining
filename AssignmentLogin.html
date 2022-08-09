@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Login Assignment</title>
+     <style>
+          p{
+               color: red;
+          }
+          .inputs{
+               border: 1px solid red;
+          }
+     </style>
+</head>
+
+<body>
+     <form action="ShowFlights.html">
+          Enter Email
+          <input type="email" onkeyup="clearInput()" name="email" id="email" required>
+          <p id="emailErr"></p>
+          Enter Password
+          <input type="password" onkeyup="clearInput()" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,24}$" name="password" id="password" required>
+          <p id="passwordErr"></p>
+          Re Enter Password
+          <input type="password" onkeyup="clearInput()" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,24}$" name="reenteredpassword" id="reentered" required>
+          <p id="reenteredErr"></p>
+          <input type="submit" onclick="return validateUser()" value="Login">
+          <p id="matchErr"></p>
+          <p style="color: indigo;">Your password must be 8 characters long with one uppercase and one digit and one lowercase..</p>
+     </form>
+
+
+     <script src="AssignmentMain.js"></script>
+</body>
+</html>
