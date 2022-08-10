@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AnimeGuy - The Anime Fandom</title>
+  <link rel="shortcut icon" href="images/otaku.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Muli&display=swap" rel="stylesheet">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+</head>
+<body>
+    <div class="header">
+      <h1>Welcome to AnimeGuy</h1>    
+    </div>
+      
+    <div class="topnav">
+        <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="login.html">Login</a></li>
+        <li><img src="images/otaku.png" class="logo" style="float: right; padding-right: 20px; width: 70px; height:50px"></li>
+        </ul>
+      </div>
+      
+      <div class="row">
+        <div class="main">
+          <div class="card">
+            <h2 style="text-align: center;">Register to explore amazing Anime Fandoms.</h2>
+            <p id="error" style="color: red;"> </p>
+            <form action="index.html">
+                <div class="container">
+                  <label for="uname"><b>Username</b></label>
+                  <input type="text" onkeyup="clearInput()" id="uname" placeholder="Enter Username" name="uname">
+              
+                  <label for="psw"><b>Password</b></label>
+                  <input type="password" onkeyup="clearInput()" id="psw" placeholder="Enter Password" name="psw">
+              
+                  <label for="email"><b>Email Address</b></label>
+                  <input type="email" onkeyup="clearInput()" id="email" placeholder="Enter Email Address" name="email">
+              
+                  <label for="city"><b>City</b></label>
+                  <input type="text" onkeyup="clearInput()" id="city" placeholder="Enter City" name="city">
+              
+                  <label for="mobile"><b>Mobile No.</b></label>
+                  <input type="tel" onkeyup="clearInput()" id="mobile" placeholder="Enter Mobile Number" name="mobile">
+
+                  <button type="submit" onclick="return validateUser('register')">Register</button>
+                </div>
+              </form>
+              
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer">
+        <p>© 2022 AnimeGuy - The Anime Fandom</p>
+      </div>     
+      
+    <script src='main.js'></script>
+      
+</body>
+</html>

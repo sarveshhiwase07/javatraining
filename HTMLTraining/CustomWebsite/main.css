@@ -1,0 +1,222 @@
+:root{
+  --bg-color: rgba(54,57,63,1);
+  --nav-color : rgba(59,130,246,1);
+  --dark-bg-color : rgba(32,34,37,1);
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Muli', 'Baloo Da 2', 'Montserrat', sans-serif;
+  }
+
+  
+  body {
+    font-family: Arial;
+    padding: 10px;
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-2210775-jpeg.jpg") no-repeat;
+    background-size: cover;
+    background-position: center center;
+  }
+  
+  /* Header/Blog Title */
+  .header {
+    padding: 10px;
+    text-align: center;
+    background: var(--dark-bg-color);
+    color: whitesmoke;
+    width: 80%;
+    margin: auto;
+    font-weight: bolder;
+    font-size: 1.5rem;
+  }
+    
+  /* Style the top navigation bar */
+  .topnav {
+    overflow: hidden;
+    animation: colorchange 7s ease 0s infinite alternate none running;
+    /* background-color: var(--nav-color); */
+    width: 80%;
+    margin: auto;
+    padding: 0rem 1rem 1rem 1rem;
+  }
+  
+  .topnav ul {
+    list-style-type: none;
+  }
+
+
+  
+  /* Style the topnav links */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 1rem;
+    /* height: 70px; */
+  }
+  
+  /* Change color on hover */
+  .topnav a:hover {
+    background-color: whitesmoke;
+    color: black;
+    border-radius: 0.5rem;
+  }
+
+  
+  .main {   
+    width: 80%;
+    margin: auto;
+  }
+  
+  /* Add a card effect for articles */
+  .card {
+    background-color: var(--bg-color);;
+    padding: 20px;
+    margin-top: 20px;
+    color: whitesmoke;
+  }
+  
+ .cc p{
+  color: white;
+  padding: 0.5rem;
+  background-color: var(--nav-color) ;
+  font-weight: bold;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+ }
+
+ .cc p:hover{
+  opacity: 0.8;
+  cursor: pointer;
+ }
+
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 20px;
+    text-align: center;
+    background: var(--bg-color);;
+    margin-top: 20px;
+    width: 80%;
+    margin: auto;
+    color: whitesmoke;
+    font-weight: bold;
+  }
+  
+  .cc {
+    float: left;
+    padding: 5px;
+  }
+  
+  /* Full-width inputs */
+  input[type=text], input[type=password], input[type=email], input[type=tel] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: darkblue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  /* Add a hover effect for buttons */
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Extra style for the cancel button (red) */
+  .cancelbtn {
+    width: 100%;
+    padding: 10px 18px;
+    background-color: #f44336;
+  }
+  
+  .cancelbtn a{
+    color: whitesmoke;
+    text-decoration: none;
+  }
+  
+  /* Add padding to containers */
+  .container {
+    padding: 16px;
+    width: 350px;
+    margin: auto;
+  }
+  
+  /* The "Forgot password" text */
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+
+  img {
+    width: 225px;
+    max-height: 300px;
+  }
+
+  img:hover{
+    opacity: 0.7;
+    cursor: pointer;
+  }
+
+  b{
+    font-size: 2rem;
+  }
+
+  .logo{
+    animation: spin 2s infinite linear;
+  }
+
+  @keyframes spin {
+    from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+  }
+
+  @keyframes colorchange {
+    0%{
+      background-color: var(--nav-color);
+    }
+
+    25% {
+      background: rgb(65, 196, 222);
+    }
+    
+    50% {
+        background: rgb(140, 199, 63);
+    }
+    75% {
+        background: rgb(243, 211, 51);
+    }
+    100% {
+        background: rgb(247, 142, 86);
+    }
+  }
+
+  /* what is map, treemap and hashmap in java */
+  /* what is Stream API */
+  /* what is Default interface in java */
