@@ -13,9 +13,13 @@
 		.then((data) => {
 			const {stateName,stateCities} = data;
 			const cities = stateCities.split(',');
-			const citytext = cities.join(', ')
-			const htmlText = `<h1> ${stateName} </h1> <h2> ${citytext} </h2>`;
-			document.getElementById('result').innerHTML = htmlText;
+			const title = `<h1> ${stateName} </h1>`;
+			let options = `<option value="city">Select a city</option>`;
+			document.getElementById('result').innerHTML = title;
+			cities.forEach((city) => {
+				options += `<option value="${city}">${city} </option>`;
+			})
+			document.getElementById('cities').innerHTML = options;
 		}
 		).catch((err) => console.log(err));
 	}
@@ -44,8 +48,16 @@ h2{
   <option value="2">TamilNadu</option>
   <option value="3">Gujarat</option>
 </select>
-
+<br>
+<br>
+<br>
 <span id="result"> </span>
+<label for="cities" >Choose a city</label>
+<select name="cities" id="cities">
+<option value="city">Select a city</option>
+</select>
+
+
 
 </body>
 </html>
