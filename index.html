@@ -1,63 +1,31 @@
 <html>
-<head>
-<script>
-	function getCities()
-	{
-		var v=document.getElementById('state').value; //1 10 110 102
-		console.log(v);
-		var url="index.jsp?stateid="+v;
-		var spanele = document.getElementById('result');
-		
-		fetch(url)
-		.then((response) => response.json()).catch((err) => console.log(err))
-		.then((data) => {
-			const {stateName,stateCities} = data;
-			const cities = stateCities.split(',');
-			const title = `<h1> ${stateName} </h1>`;
-			let options = `<option value="city">Select a city</option>`;
-			document.getElementById('result').innerHTML = title;
-			cities.forEach((city) => {
-				options += `<option value="${city}">${city} </option>`;
-			})
-			document.getElementById('cities').innerHTML = options;
-		}
-		).catch((err) => console.log(err));
-	}
-			
-	
-</script>
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Location Selector</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+  <div class="center">
+  <form action="#" class="locationForm">
+      <h1>FindMe!</h1>
+      <div class="loading">
+      <div class="dot dot1"></div>
+      <div class="dot dot2"></div>
+      <div class="dot dot3"></div>
+    </div>
+      <label for="states">Choose a state</label>
+      <select name="states" id="states" onchange="getCities()">
+        <option value="0">Select a state</option>
+      </select>
+      <label for="cities">Choose a city</label>
+      <select name="cities" id="cities">
+        <option value="0">Select a city</option>
+      </select>
+    </form>
+  </div>
 
-<style>
-h1{
-	color: aquamarine;
-	font-size: 2rem;
-}
-h2{
-	color: indigo;
-	font-size: 1rem;
-}
-
-</style>
-<body>
-    <marquee><h1>This is an example of ajax with database</h1></marquee>
-<label for="states" >Choose a state</label>
-<select name="states" id="state" onchange="getCities()">
-<option value="0"> Select state </option>
-  <option value="1">Maharashtra</option>
-  <option value="2">TamilNadu</option>
-  <option value="3">Gujarat</option>
-</select>
-<br>
-<br>
-<br>
-<span id="result"> </span>
-<label for="cities" >Choose a city</label>
-<select name="cities" id="cities">
-<option value="city">Select a city</option>
-</select>
-
-
-
-</body>
+    <script src="main.js" type="text/javascript" defer></script>
+  </body>
 </html>

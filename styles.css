@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+:root {
+  --loading-color: #5469d4;
+  --font-color: #5469d4;
+}
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-2210775-jpeg.jpg')
+    center center no-repeat;
+  background-size: cover;
+}
+
+h1 {
+  color: #5469d4;
+  font-size: 2rem;
+}
+
+h2 {
+  color: #5469d4;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+
+
+.locationForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: column;
+  padding: 2rem;
+  border-radius: 4px;
+  width: 100%;
+  max-width: 400px;
+  margin: auto;
+  background: #f8f4e5;
+  border: 2px solid black;
+  box-shadow: 15px 15px 1px #ffa580, 15px 15px 1px 2px black;
+  margin-top: 6rem;
+}
+
+select,select:hover,select:focus{
+  padding: 1rem;
+  background: #5469d4;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  color: white;
+  min-width: 300px;
+  border-bottom: 5px solid #95a4ff;
+  -webkit-text-fill-color: #2a293e;
+  -webkit-box-shadow: 0 0 0px 1000px #f8f4e5 inset;
+  box-shadow: 0 0 0px 1000px #f8f4e5 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+option {
+  padding: 1rem;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dot {
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--loading-color);
+  border-radius: 50%;
+}
+
+.dot1 {
+  animation: updown 1.5s ease-in 0s infinite normal none;
+}
+
+.dot2 {
+  animation: updown 1.25s ease-out 0s infinite normal none;
+}
+
+.dot3 {
+  animation: updown 1.5s ease-in-out 0s infinite normal none;
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
