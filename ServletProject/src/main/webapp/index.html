@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>This is my servlet static HTML page.</h1>
+	<a href="/ServletProject/MyServlet">My Servlet</a>
+<form action="FindCountryFromDB2">
+			Select country name 
+			<select name="countryName">
+				<option value="India">India</option>
+				<option value="Pakistan">Pakistan</option>
+				<option value="China">China</option>
+				<option value="England">United Kingdom</option>
+				<option value="America">America</option>
+				
+			</select>
+			<input type=submit name=submit value="Find Capital">
+		</form>
+		
+	<br/><br/>
+	<form action="insertservlet">
+	<label for="countryname">Enter country name</label>
+	<input type=text name="countryname"/>
+	<br/>
+	<br/>
+	<label for="capital">Enter country capital</label>
+	<input type=text name="capital"/>
+	<br/>
+	<br/>
+	<label for="primeminister">Enter country's prime minister</label>
+	<input type=text name="primeminister"/>
+	<br/>
+	<br/>
+	<label for="population">Enter population</label>
+	<input type=text name="population"/>
+	<br/>
+	<br/>
+	<label for="currency">Enter currency</label>
+	<input type=text name="currency"/>
+	<br/>
+	<br/>
+	<input type=submit value="Add to the database.."/>
+	</form>
+	
+</body>
+</html>
